@@ -13,6 +13,9 @@
         android:orientation="vertical"
         android:gravity="center"
         android:background="#EEEEEE">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
         <Button android:id="@+id/circleBtn"
             android:layout_height="wrap_content"
@@ -31,6 +34,12 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="Point"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
 
 
         <Button android:id="@+id/rectBtn"
@@ -40,14 +49,61 @@
         <Button android:id="@+id/roundRectBtn"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="Round Rectangl"/>
+            android:text="Round Rectangle"/>
+        <Button android:id="@+id/ovalBtn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Oval"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button android:id="@+id/arcBtn"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Arc"/>
+        <Button android:id="@+id/btnStar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="⭐ Star" />
+        <Button android:id="@+id/btnHeart"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="❤️ Heart" />
+        <Button android:id="@+id/btnWave"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="🌊 Wave" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button android:id="@+id/btnPolygon"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="⬟ Polygon" />
+
+            <Button android:id="@+id/btnQuadratic"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Quad Bezier" />
+            <Button android:id="@+id/btnCubic"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Cubic Bezier" />
+
+        </LinearLayout>
         <Button android:id="@+id/clearBtn"
             android:layout_height="wrap_content"
             android:layout_width="250dp"
             android:text="Clear"/>
     </LinearLayout>
 
-    <com.example.task12drawoverotherapp.MyCanvasView
+    <com.example.task12drawoverotherapp.DrawingCanvasView
         android:id="@+id/drawingView"
         android:layout_width="match_parent"
         android:layout_height="0dp"

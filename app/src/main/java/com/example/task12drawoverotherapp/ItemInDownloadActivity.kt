@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView
 class ItemInDownloadActivity : AppCompatActivity() {
     private lateinit var adapter: DownloadAdapter
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

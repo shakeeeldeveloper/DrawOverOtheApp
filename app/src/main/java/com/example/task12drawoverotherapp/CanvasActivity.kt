@@ -10,7 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class CanvasActivity : AppCompatActivity() {
-    private lateinit var drawView: MyCanvasView
+    private lateinit var drawView: DrawingCanvasView
     private lateinit var cornerSeek: SeekBar
     private lateinit var cornerLabel: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,7 +84,33 @@ class CanvasActivity : AppCompatActivity() {
         findViewById<Button>(R.id.roundRectBtn).setOnClickListener {
             drawView.setShapeMode(ShapeMode.ROUNDED_RECTANGLE)
         }
-        findViewById<Button>(R.id.roundRectBtn).setOnClickListener {
+        findViewById<Button>(R.id.ovalBtn).setOnClickListener {
+            drawView.setShapeMode(ShapeMode.OVAL)
+        }
+        findViewById<Button>(R.id.arcBtn).setOnClickListener {
+            drawView.setShapeMode(ShapeMode.ARC)
+        }
+        findViewById<Button>(R.id.btnStar).setOnClickListener {
+            drawView.setShapeMode(ShapeMode.STAR)
+        }
+         findViewById<Button>(R.id.btnHeart).setOnClickListener {
+            drawView.setShapeMode(ShapeMode.HEART)
+        }
+        findViewById<Button>(R.id.btnWave).setOnClickListener {
+            drawView.setShapeMode(ShapeMode.WAVE)
+        }
+        findViewById<Button>(R.id.btnPolygon).setOnClickListener {
+            drawView.setShapeMode(ShapeMode.POLYGON)
+        }
+        findViewById<Button>(R.id.btnQuadratic).setOnClickListener {
+            drawView.setShapeMode(ShapeMode.QUADRATIC_BEZIER)
+        }
+        findViewById<Button>(R.id.btnCubic).setOnClickListener {
+            drawView.setShapeMode(ShapeMode.CUBIC_BEZIER)
+        }
+
+
+        findViewById<Button>(R.id.clearBtn).setOnClickListener {
             drawView.clearCanvas()
         }
 

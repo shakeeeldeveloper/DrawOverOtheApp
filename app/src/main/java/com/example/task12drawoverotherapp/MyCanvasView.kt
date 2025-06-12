@@ -212,9 +212,9 @@ class MyCanvasView(context: Context, attrs: AttributeSet?) : View(context, attrs
     private var cornerRadius: Float = 50f
 
     private val paint = Paint().apply {
-        color = Color.BLACK
+        color = Color.BLUE
         strokeWidth = 6f
-        style = Paint.Style.STROKE
+        style = Paint.Style.FILL_AND_STROKE
         isAntiAlias = true
     }
 
@@ -299,6 +299,24 @@ class MyCanvasView(context: Context, attrs: AttributeSet?) : View(context, attrs
                                 val p1 = currentPoints[0]
                                 val p2 = currentPoints[1]
                                 val p3 = currentPoints[2]
+                                val paintCopy = Paint(paint)
+                                shapes.add(Pair({
+                                    val path = Path()
+                                    path.moveTo(p1.x, p1.y)
+                                    path.lineTo(p2.x, p2.y)
+                                    path.lineTo(p3.x, p3.y)
+                                    path.close()
+                                    it.drawPath(path, paintCopy)
+                                }, paintCopy))
+                                currentPoints.clear()
+                                invalidate()
+                            }
+                        }
+                      /*  ShapeMode.TRIANGLE -> {
+                            if (currentPoints.size == 3) {
+                                val p1 = currentPoints[0]
+                                val p2 = currentPoints[1]
+                                val p3 = currentPoints[2]
                                 shapes.add(Pair({
                                     val path = Path()
                                     path.moveTo(p1.x, p1.y)
@@ -312,7 +330,7 @@ class MyCanvasView(context: Context, attrs: AttributeSet?) : View(context, attrs
                             } else {
                                 return true // wait for 3rd touch
                             }
-                        }
+                        }*/
 
                        /* ShapeMode.TRIANGLE -> {
                             if (currentPoints.size == 3) {
@@ -428,7 +446,7 @@ class MyCanvasView(context: Context, attrs: AttributeSet?) : View(context, attrs
 }
 
 
-enum class ShapeMode {
+/*enum class ShapeMode {
     NONE,
     CIRCLE,
     LINE,
@@ -436,6 +454,6 @@ enum class ShapeMode {
     POINTS,
     RECTANGLE,
     ROUNDED_RECTANGLE
-}
+}*/
 
 

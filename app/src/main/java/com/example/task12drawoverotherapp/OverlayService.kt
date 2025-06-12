@@ -49,9 +49,8 @@ class OverlayService : Service() {
 
        val iconView = floatingIcon.findViewById<ImageView>(R.id.floatingIcon)
 
-       // 👉 Use Glide to load and circle crop the icon
        Glide.with(this)
-           .load(R.drawable.devsky_logo) // Your PNG or image resource
+           .load(R.drawable.devsky_logo)
            .circleCrop()
            .into(iconView)
 
