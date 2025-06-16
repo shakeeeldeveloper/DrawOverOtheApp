@@ -55,6 +55,7 @@ class ItemInDownloadActivity : AppCompatActivity() {
             while (it.moveToNext()) {
                 val name = it.getString(nameIndex)
                 downloads.add(name)
+
             }
         }
 
