@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,6 +20,10 @@
             android:textColor="@color/white"
             />
     </LinearLayout>
+=======
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+>>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/popupRecyclerView"
         android:layout_width="match_parent"

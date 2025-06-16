@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+<<<<<<< HEAD
     android:layout_height="match_parent"
     android:padding="8dp"
     >
@@ -23,4 +24,11 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"/>
 
+=======
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fileListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+>>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
 </LinearLayout>

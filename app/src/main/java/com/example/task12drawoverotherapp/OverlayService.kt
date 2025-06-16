@@ -10,7 +10,10 @@ import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+<<<<<<< HEAD
 import com.bumptech.glide.Glide
+=======
+>>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
 import java.io.File
 
 class OverlayService : Service() {
@@ -27,6 +30,7 @@ class OverlayService : Service() {
         showFloatingIcon()
     }
 
+<<<<<<< HEAD
 
    private fun showFloatingIcon() {
        floatingIcon = LayoutInflater.from(this).inflate(R.layout.floating_icon, null)
@@ -96,6 +100,13 @@ class OverlayService : Service() {
         val params = WindowManager.LayoutParams(
             WindowManager.LayoutParams.WRAP_CONTENT,
             WindowManager.LayoutParams.WRAP_CONTENT,
+=======
+    private fun showFloatingIcon() {
+        floatingIcon = LayoutInflater.from(this).inflate(R.layout.floating_icon, null)
+
+        val params = WindowManager.LayoutParams(
+            WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT,
+>>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
                 WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
             else WindowManager.LayoutParams.TYPE_PHONE,
@@ -109,6 +120,7 @@ class OverlayService : Service() {
 
         windowManager.addView(floatingIcon, params)
 
+<<<<<<< HEAD
         val iconView = floatingIcon.findViewById<ImageView>(R.id.floatingIcon)
 
         var initialX = 0
@@ -199,6 +211,18 @@ class OverlayService : Service() {
     }
 
     /*private fun showPopupWindow() {
+=======
+        floatingIcon.findViewById<ImageView>(R.id.floatingIcon).setOnClickListener {
+            if (popupView == null) {
+                showPopupWindow()
+            } else {
+                removePopup()
+            }
+        }
+    }
+
+    private fun showPopupWindow() {
+>>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
         popupView = LayoutInflater.from(this).inflate(R.layout.popup_layout, null)
         val recyclerView = popupView!!.findViewById<RecyclerView>(R.id.popupRecyclerView)
         fileAdapter = FileAdapter()
@@ -229,7 +253,11 @@ class OverlayService : Service() {
             }
         }
         fileObserver?.startWatching()
+<<<<<<< HEAD
     }*/
+=======
+    }
+>>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
 
     private fun removePopup() {
         popupView?.let { windowManager.removeView(it) }
