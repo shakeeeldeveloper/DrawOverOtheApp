@@ -1,6 +1,5 @@
 package com.example.task12drawoverotherapp
 
-<<<<<<< HEAD
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -13,15 +12,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-=======
-import android.content.Intent
-import android.net.Uri
-import android.os.*
-import android.provider.Settings
-import android.widget.Toast
-import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AppCompatActivity
->>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
+
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.io.File
@@ -44,21 +35,14 @@ class MainActivity : AppCompatActivity() {
         } else {
             startService(Intent(this, OverlayService::class.java))
         }*/
-<<<<<<< HEAD
         requestStoragePermission()
-=======
 
->>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
         val recyclerView = findViewById<RecyclerView>(R.id.fileListView)
         fileAdapter = FileAdapter()
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = fileAdapter
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
         val dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
         updateFileList(dir)
 
@@ -72,14 +56,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateFileList(dir: File) {
-<<<<<<< HEAD
         val allFiles = dir.listFiles()?.filter {
             it.isFile || it.isDirectory // Include both files and folders
         } ?: emptyList()
         fileAdapter.submitList(allFiles)
-=======
         fileAdapter.submitList(dir.listFiles()?.toList() ?: emptyList())
->>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
     }
 
     override fun onDestroy() {
@@ -110,7 +91,6 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-<<<<<<< HEAD
     private fun requestStoragePermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             val permissions = arrayOf(
@@ -129,7 +109,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-=======
->>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
+
 
 }

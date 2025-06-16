@@ -10,10 +10,8 @@ import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-<<<<<<< HEAD
 import com.bumptech.glide.Glide
-=======
->>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
+
 import java.io.File
 
 class OverlayService : Service() {
@@ -28,11 +26,13 @@ class OverlayService : Service() {
         super.onCreate()
         windowManager = getSystemService(WINDOW_SERVICE) as WindowManager
         showFloatingIcon()
+        //ok
     }
 
-<<<<<<< HEAD
 
-   private fun showFloatingIcon() {
+
+
+    private fun showFloatingIcon() {
        floatingIcon = LayoutInflater.from(this).inflate(R.layout.floating_icon, null)
 
        val params = WindowManager.LayoutParams(
@@ -255,9 +255,7 @@ class OverlayService : Service() {
         fileObserver?.startWatching()
 <<<<<<< HEAD
     }*/
-=======
-    }
->>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
+
 
     private fun removePopup() {
         popupView?.let { windowManager.removeView(it) }
@@ -275,3 +273,4 @@ class OverlayService : Service() {
 
     override fun onBind(intent: Intent?): IBinder? = null
 }
+

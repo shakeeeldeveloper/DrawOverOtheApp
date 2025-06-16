@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -13,13 +12,6 @@
         android:scaleType="centerCrop"
         android:background="@drawable/floating_bg"
         android:src="@drawable/devsky_logo" />
-</FrameLayout>
-=======
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/floatingIcon"
-    android:layout_width="60dp"
-    android:layout_height="60dp"
-    android:background="@drawable/devsky_logo"
-    android:padding="10dp"/>
 
->>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
+</FrameLayout>
+

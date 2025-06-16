@@ -1,10 +1,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
-<<<<<<< HEAD
     <solid android:color="#FFFFFF" /> <!-- Or make it transparent -->
     <stroke android:width="1dp" android:color="#CCCCCC" />
-</shape>
-=======
+
     <solid android:color="#AA000000"/>
 </shape>
->>>>>>> 37a384d12a41c4db8da5e48b5a814fec5254db33
